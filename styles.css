@@ -25,8 +25,8 @@ body {
 
 .print-btn {
     position: fixed;
-    bottom: 50px;
-    right: 50px;
+    top: 75px;
+    right: 75px;
     font-size: 30px;
     padding: 10px;
     box-shadow: var(--box-shadow)
@@ -67,6 +67,7 @@ body {
 
 .name {
     font-size: 50px;
+    color: var(--primary-hex);
 }
 
 .line {
