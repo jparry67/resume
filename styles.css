@@ -1,0 +1,150 @@
+:root {
+    --primary-hex: #345678;
+    --primary-rgba: rgba(52, 86, 120, 0.7);
+    --box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.5);
+    --main-padding: 15px;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    font-family: 'Montserrat', sans-serif;;
+}
+
+.print-only {
+    display: none;
+}
+
+body {
+    background-color: #405366;
+    display: grid;
+    place-items: center;
+}
+
+.print-btn {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    font-size: 30px;
+    padding: 10px;
+    box-shadow: var(--box-shadow)
+}
+    
+.resume {
+    height: 11in;
+    width: 8.5in;
+    margin: 50px;
+    padding:    .5in;
+    background-color: white;
+    display: grid;
+    grid-template-rows: 1fr 3px 6fr;
+    box-shadow: var(--box-shadow)
+}
+
+.header {
+    padding: 20px;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.header * {
+    font-family: 'Red Rose', cursive;
+    font-size: 32px;
+    margin: auto 0;
+}
+
+.monogram {
+    height: 87px;
+    width: 87px;
+    margin: auto;
+    border: var(--primary-rgba) solid 3px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+}
+
+.name {
+    font-size: 50px;
+}
+
+.line {
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary-rgba);
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 1fr 3px 3fr;
+}
+
+.side-bar {
+    padding: 10px;
+}
+
+.main-content {
+    padding: 10px;
+}
+
+.section-title {
+    color: var(--primary-hex);
+    text-transform: uppercase;
+    font-weight: 600;
+    padding-top: 15px;
+    border-bottom: solid var(--primary-rgba) 1px;
+}
+
+.section {
+    padding: 5px 0;
+    font-size: 14px;
+    list-style-type: none;
+    line-height: 140%;
+}
+
+.section > li {
+    display: flex;
+    justify-content: space-between;
+}
+
+.section-subtitle {
+    padding-top: 10px;
+}
+
+.section-subtitle :first-child {
+    font-weight: 600;
+}
+
+.location {
+    font-style: italic;
+}
+
+.languages {
+    font-weight: 600;
+    font-size: 12px;
+}
+
+li li {
+    margin-left: 20px;
+}
+
+a {
+    color: blue;
+}
+
+@media print {
+    .resume {
+        margin: 0;
+        padding: 0;
+        box-shadow: 0 0 0 0;
+    }
+
+    .no-print {
+        display: none;
+    }
+
+    .print-only {
+        display: inline;
+    }
+}
